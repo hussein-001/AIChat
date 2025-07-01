@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		159B27952E14504F00256845 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 159B27942E14504F00256845 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		159B273F2E12D0CB00256845 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159B27952E14504F00256845 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +118,7 @@
 			);
 			name = AIChat;
 			packageProductDependencies = (
+				159B27942E14504F00256845 /* SDWebImageSwiftUI */,
 			);
 			productName = AIChat;
 			productReference = 159B27312E12D0C900256845 /* AIChat.app */;
@@ -196,6 +202,9 @@
 			);
 			mainGroup = 159B27282E12D0C900256845;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				159B27932E14504F00256845 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 159B27322E12D0C900256845 /* Products */;
 			projectDirPath = "";
@@ -235,6 +244,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		159B276D2E12E29800256845 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -596,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		159B27932E14504F00256845 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		159B27942E14504F00256845 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 159B27932E14504F00256845 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 159B27292E12D0C900256845 /* Project object */;
 }
