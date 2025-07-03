@@ -39,7 +39,7 @@ struct WelcomeView: View {
     private var ctaButtons: some View {
         VStack(spacing: 8) {
             NavigationLink {
-                OnboardingCompletedView()
+                OnboardingIntroView()
             } label: {
                 Text("Get Started")
                     .callToActionButton()
@@ -56,7 +56,7 @@ struct WelcomeView: View {
         }
     }
     
-    private var policyLinks : some View {
+    private var policyLinks: some View {
         HStack(spacing: 8) {
             Link(destination: URL(string: Constants.privacyPolicyUrl)!) {
                 Text("Terms of Service")

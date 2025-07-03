@@ -15,7 +15,7 @@ extension View {
             .padding()
             .frame(maxWidth: .infinity)
             .frame(height: 55)
-            .background(Color.accentColor)
+            .background(Color.accent)
             .cornerRadius(16)
     }
     
