@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeCellView: View {
+struct HeroCellView: View {
     
     var title: String? = "this is some title"
     var subTitle: String? = "this is some SubTitle"
@@ -22,7 +22,7 @@ struct HomeCellView: View {
                     .fill(.accent)
             }
         }
-        .overlay(alignment: .bottomLeading){
+        .overlay(alignment: .bottomLeading) {
             VStack(alignment: .leading, spacing: 4) {
                 if let title {
                     Text(title)
@@ -40,7 +40,7 @@ struct HomeCellView: View {
                 LinearGradient(colors: [
                     Color.black.opacity(0.2),
                     Color.black.opacity(0.3),
-                    Color.black.opacity(0.4),
+                    Color.black.opacity(0.4)
                 ], startPoint: .top, endPoint: .bottom
                 )
             )
@@ -51,6 +51,6 @@ struct HomeCellView: View {
 }
 
 #Preview {
-    HomeCellView()
+    HeroCellView()
         .frame(width: 300, height: 200)
 }
