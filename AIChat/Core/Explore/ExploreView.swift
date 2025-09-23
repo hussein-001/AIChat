@@ -41,7 +41,7 @@ struct ExploreView: View {
                     }
                 }
             }
-            .removeListRowFormating()
+            .removeListRowFormatting()
         } header: {
             Text("Featured")
         }
@@ -68,7 +68,7 @@ struct ExploreView: View {
                 .scrollTargetLayout()
                 .scrollTargetBehavior(.viewAligned)
             }
-            .removeListRowFormating()
+            .removeListRowFormatting()
         } header: {
             Text("Categories")
         }
@@ -85,7 +85,7 @@ struct ExploreView: View {
                 .anyButton(.highlight) {
                     
                 }
-                .removeListRowFormating()
+                .removeListRowFormatting()
             }
             
         } header: {

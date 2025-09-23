@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @State private var showSettingsView: Bool = false
-    @State private var showCreatedAvatarView: Bool = false
+    @State private var showCreateAvatarView: Bool = false
     @State private var currentUser: UserModel? = .mock
     @State private var myAvatars: [AvatarModel] = []
     @State private var isLoading: Bool = true
@@ -32,7 +32,7 @@ struct ProfileView: View {
         .sheet(isPresented: $showSettingsView) {
             SettingsView()
         }
-        .fullScreenCover(isPresented: $showCreatedAvatarView) {
+        .fullScreenCover(isPresented: $showCreateAvatarView) {
             Text("Create Avatar")
         }
         .task {
@@ -54,7 +54,7 @@ struct ProfileView: View {
             }
             .frame(width: 100, height: 100)
             .frame(maxWidth: .infinity)
-            .removeListRowFormating()
+            .removeListRowFormatting()
         }
     }
     
@@ -65,7 +65,7 @@ struct ProfileView: View {
                     if isLoading {
                         ProgressView()
                     } else {
-                        Text("Yoiu have no Avatars Yet ! Click + to create an Avatar")
+                        Text("Yoiu have no Avatars Yet! Click + to create an Avatar")
                     }
                 }
                 .padding(50)
@@ -73,7 +73,7 @@ struct ProfileView: View {
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .foregroundStyle(.secondary)
-                .removeListRowFormating()
+                .removeListRowFormatting()
                 
             } else {
                 ForEach(myAvatars, id: \.self) { avatar in
@@ -85,7 +85,7 @@ struct ProfileView: View {
                     .anyButton(.highlight, action: {
                         
                     })
-                    .removeListRowFormating()
+                    .removeListRowFormatting()
                 }
                 .onDelete { index in
                     onDeleteAvatar(indexSet: index)
@@ -119,7 +119,7 @@ struct ProfileView: View {
     }
     
     private func onNewAvatarButtonPressed() {
-        showCreatedAvatarView = true
+        showCreateAvatarView = true
     }
     
     private func onDeleteAvatar(indexSet: IndexSet) {

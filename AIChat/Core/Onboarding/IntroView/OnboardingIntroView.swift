@@ -13,7 +13,7 @@ struct OnboardingIntroView: View {
             Group {
                 Text("Make your own ")
                 +
-                Text("avatars")
+                Text("avatars ")
                     .foregroundStyle(.accent)
                     .fontWeight(.semibold)
                 +

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
+    @State private var showSignInView: Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 8) {
@@ -21,6 +24,13 @@ struct WelcomeView: View {
                 
                 policyLinks
             }
+        }
+        .sheet(isPresented: $showSignInView) {
+            CreateAccountView(
+                title: "Sign In",
+                subTitle: "Connect to an existing Account."
+            )
+                .presentationDetents([.medium])
         }
     }
     
@@ -51,9 +61,13 @@ struct WelcomeView: View {
                 .padding(8)
                 .tappableBackgorund()
                 .onTapGesture {
-                    
+                    onSignInPressed()
                 }
         }
+    }
+    
+    private func onSignInPressed() {
+        showSignInView = true
     }
     
     private var policyLinks: some View {

@@ -30,7 +30,7 @@ struct ChatsView: View {
                     .anyButton(.highlight, action: {
                         
                     })
-                    .removeListRowFormating()
+                    .removeListRowFormatting()
                 }
             }
             .navigationTitle("Chats")
